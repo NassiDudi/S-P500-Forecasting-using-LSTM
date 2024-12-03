@@ -31,6 +31,9 @@ The dataset consists of historical data from Yahoo Finanace including:
 - QQQ (Invesco QQQ Trust)  
 - VXX (Volatility Index ETF)  
 - DIA (Dow Jones ETF)
+- SPY’s moving averages (MA10, MA50)  
+- SPY’s Relative Strength Index (RSI)
+
 
 ## Feature Engineering
 Feature engineering is crucial for enhancing the model's predictive capabilities. Here are the key features:
@@ -56,3 +59,18 @@ Feature engineering is crucial for enhancing the model's predictive capabilities
 3. Run the Jupyter notebook or Python script:
    ```bash
    jupyter notebook S&P500_Forecasting_using_LSTM.ipynb
+
+## Code Breakdown
+1. **Data Preparation**:  
+   `prepare_data()`processes historical prices into features and target variables for model training. It performs two critical tasks:
+   - Normalization with `StandardScaler`: Data is normalized to have a mean of 0 and a standard deviation of 1. This standardization ensures all features are on the same scale, improving the convergence rate and         training stability of the LSTM model.
+
+   -Sliding Window Creation for LSTM: The function creates sliding windows of data, where each window contains `window_size` consecutive time steps of input data (e.g., 10 time steps).
+      - **X (features)**: Sequences of historical data (e.g., 10-day windows) provided as input to the LSTM.
+      - **y (target)**: The target value (e.g., SPY price) corresponding to the next time step after each window.
+
+2. **Model Building**:  
+   `build_lstm()` creates an LSTM model with two LSTM layers, dropout for regularization, and dense output for regression.
+
+3. **Training**:  
+   Hyperparameter tuning involves adjusting learning rates and batch sizes with early stopping for optimal performance.   
