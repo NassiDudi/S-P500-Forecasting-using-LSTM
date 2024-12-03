@@ -50,7 +50,7 @@ Feature engineering is crucial for enhancing the model's predictive capabilities
 ## How to Run
 1. Clone this repository:
    ```bash
-   git clone https://github.com/username/repository-name.git
+   git clone https://github.com/NassiDudi/repository-name.git
    ```
 2. Install the required packages:
    ```bash
@@ -82,7 +82,7 @@ Feature engineering is crucial for enhancing the model's predictive capabilities
 4. **4-Day Forecast**:
    After training the model, the best-performing configuration(selcted by RMSE) is used to predict the next 4 days of SPY prices.
    
-## Results and Visualization:
+## Visualization:
 1. **Correlation Heatmap**: Displays the correlation between selected financial indicators and tickers.
 2. **Individual Ticker Graphs**: Time-series plots for each ticker used in the model (SPY, AAPL, XLF, QQQ, VXX, DIA).
 3. **Best Model Configuration**: Displays the learning rate, batch size, and RMSE of the best model.
@@ -93,8 +93,6 @@ Feature engineering is crucial for enhancing the model's predictive capabilities
 The best LSTM model was selected based on the lowest RMSE (Root Mean Squared Error) during the hyperparameter tuning process. Different combinations of learning rates and batch sizes were tested, with the model achieving the optimal balance between training and validation loss when the learning rate and batch size were finely adjusted.
 
 **Forecasting Performance**
-The model’s performance was evaluated using the RMSE metric. The following key results highlight the accuracy of the four-day forecast:
-
-- RMSE: The best model achieved a low RMSE, indicating that the predicted values closely match the actual SPY prices.
+- The best model achieved a low RMSE, indicating that the predicted values closely match the actual SPY prices.
 - Prediction vs. Actual: The predicted SPY prices for the four-day forecast align closely with the true prices, demonstrating the model’s effectiveness in capturing market trends. The visualization shows minimal    deviation between the actual and predicted values.
-  These results highlight the model's robustness in forecasting short-term SPY price movements, providing valuable insights into future market behavior.
+These results highlight the model's robustness in forecasting short-term SPY price movements, providing valuable insights into future market behavior.
