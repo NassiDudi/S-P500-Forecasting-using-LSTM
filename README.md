@@ -44,4 +44,15 @@ Feature engineering is crucial for enhancing the model's predictive capabilities
 3. **Time-Series Lagging**:  
    - A window-based approach (size 10) to provide the model with historical context for predicting the next time step.
 
-
+## How to Run
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/username/repository-name.git
+   ```
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the Jupyter notebook or Python script:
+   ```bash
+   jupyter notebook S&P500_Forecasting_using_LSTM.ipynb
