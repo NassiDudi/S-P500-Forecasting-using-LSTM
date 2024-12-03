@@ -9,7 +9,7 @@ This repository contains a project for forecasting the S&P 500 ETF (SPY) using a
 4. [Feature Engineering](#feature-engineering)  
 5. [How to Run](#how-to-run)  
 6. [Code Breakdown](#code-breakdown)  
-7. [Results](#results)  
+7. [Results and Visualization](#results-and-visualization)  
 8. [Forecasting the Next 4 Days](#forecasting-the-next-4-days)  
 9. [Future Enhancements](#future-enhancements)  
 
@@ -65,7 +65,7 @@ Feature engineering is crucial for enhancing the model's predictive capabilities
    `prepare_data()`processes historical prices into features and target variables for model training. It performs two critical tasks:
    - Normalization with `StandardScaler`: Data is normalized to have a mean of 0 and a standard deviation of 1. This standardization ensures all features are on the same scale, improving the convergence rate and         training stability of the LSTM model.
 
-   -Sliding Window Creation for LSTM: The function creates sliding windows of data, where each window contains `window_size` consecutive time steps of input data (e.g., 10 time steps).
+   - Sliding Window Creation for LSTM: The function creates sliding windows of data, where each window contains `window_size` consecutive time steps of input data (e.g., 10 time steps).
       - **X (features)**: Sequences of historical data (e.g., 10-day windows) provided as input to the LSTM.
       - **y (target)**: The target value (e.g., SPY price) corresponding to the next time step after each window.
 
@@ -73,4 +73,18 @@ Feature engineering is crucial for enhancing the model's predictive capabilities
    `build_lstm()` creates an LSTM model with two LSTM layers, dropout for regularization, and dense output for regression.
 
 3. **Training**:  
-   Hyperparameter tuning involves adjusting learning rates and batch sizes with early stopping for optimal performance.   
+   Hyperparameter tuning involves adjusting learning rates and batch sizes with early stopping for optimal performance.
+   The following hyperparameters are tuned during model training:
+   - **Learning Rate**: [0.001, 0.01]
+   - **Batch Size**: [32, 16]
+   - **Early Stopping**: Monitors validation loss with `patience=3` to avoid overfitting.
+
+4. **4-Day Forecast**:
+   After training the model, the best-performing configuration(selcted by RMSE) is used to predict the next 4 days of SPY prices.
+   
+## Results and Visualization:
+1. **Correlation Heatmap**: Displays the correlation between selected financial indicators and tickers.
+2. **Individual Ticker Graphs**: Time-series plots for each ticker used in the model (SPY, AAPL, XLF, QQQ, VXX, DIA).
+3. **Best Model Configuration**: Displays the learning rate, batch size, and RMSE of the best model.
+4. **Predicted vs Actual Prices Plot**: Compares the predicted SPY prices with the actual prices on the original scale.
+
