@@ -50,7 +50,7 @@ Feature engineering is crucial for enhancing the model's predictive capabilities
 ## How to Run
 1. Clone this repository:
    ```bash
-   git clone https://github.com/NassiDudi/repository-name.git
+   git clone https://github.com/NassiDudi/SPY-sp500--Forecasting-using-LSTM.git
    ```
 2. Install the required packages:
    ```bash
