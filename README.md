@@ -9,9 +9,9 @@ This repository contains a project for forecasting the S&P 500 ETF (SPY) using a
 4. [Feature Engineering](#feature-engineering)  
 5. [How to Run](#how-to-run)  
 6. [Code Breakdown](#code-breakdown)  
-7. [Results and Visualization](#results-and-visualization)  
+7. [Visualization](#visualization)  
 8. [Forecasting the Next 4 Days](#forecasting-the-next-4-days)  
-9. [Future Enhancements](#future-enhancements)  
+9. [Results](#results)  
 
 ## Project Overview
 This project uses a sequential LSTM-based neural network to predict future S&P 500 prices based on selected financial indicators. It includes early stopping for efficient training, hyperparameter tuning, and performance evaluation.
@@ -88,3 +88,13 @@ Feature engineering is crucial for enhancing the model's predictive capabilities
 3. **Best Model Configuration**: Displays the learning rate, batch size, and RMSE of the best model.
 4. **Predicted vs Actual Prices Plot**: Compares the predicted SPY prices with the actual prices on the original scale.
 
+## Results:
+**Model Selection and Evaluation**
+The best LSTM model was selected based on the lowest RMSE (Root Mean Squared Error) during the hyperparameter tuning process. Different combinations of learning rates and batch sizes were tested, with the model achieving the optimal balance between training and validation loss when the learning rate and batch size were finely adjusted.
+
+**Forecasting Performance**
+The model’s performance was evaluated using the RMSE metric. The following key results highlight the accuracy of the four-day forecast:
+
+- RMSE: The best model achieved a low RMSE, indicating that the predicted values closely match the actual SPY prices.
+- Prediction vs. Actual: The predicted SPY prices for the four-day forecast align closely with the true prices, demonstrating the model’s effectiveness in capturing market trends. The visualization shows minimal    deviation between the actual and predicted values.
+  These results highlight the model's robustness in forecasting short-term SPY price movements, providing valuable insights into future market behavior.
