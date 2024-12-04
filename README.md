@@ -51,13 +51,13 @@ Feature engineering is crucial for enhancing the model's predictive capabilities
 There are two ways you can run this project:
 
 1. Using Google Colab (Recommended for easy setup)
-Download the notebook:
+   Download the notebook:
 
-Visit the GitHub repository and download the S&P500_Forecasting_using_LSTM.ipynb file.
-Upload the notebook to Colab:
+   Visit the GitHub repository and download the S&P500_Forecasting_using_LSTM.ipynb file.
+   Upload the notebook to Colab:
 
-Open Google Colab.
-Click on "File" > "Upload notebook" and select the downloaded .ipynb file.
+   Open Google Colab.
+   Click on "File" > "Upload notebook" and select the downloaded .ipynb file.
 
 2. Clone this repository:
    ```bash
