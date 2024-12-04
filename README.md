@@ -48,17 +48,23 @@ Feature engineering is crucial for enhancing the model's predictive capabilities
    - A window-based approach (size 10) to provide the model with historical context for predicting the next time step.
 
 ## How to Run
-1. Clone this repository:
+There are two ways you can run this project:
+
+1. Using Google Colab (Recommended for easy setup)
+Download the notebook:
+
+Visit the GitHub repository and download the S&P500_Forecasting_using_LSTM.ipynb file.
+Upload the notebook to Colab:
+
+Open Google Colab.
+Click on "File" > "Upload notebook" and select the downloaded .ipynb file.
+
+2. Clone this repository:
    ```bash
    git clone https://github.com/NassiDudi/SPY-sp500--Forecasting-using-LSTM.git
    ```
-2. Install the required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the Jupyter notebook or Python script:
-   ```bash
-   jupyter notebook S&P500_Forecasting_using_LSTM.ipynb
+   - Install the required packages
+   - Use any IDE that supports Jupyter Notebooks
 
 ## Code Breakdown
 1. **Data Preparation**:  
